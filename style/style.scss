@@ -1,0 +1,68 @@
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2.5rem;
+$gradient: linear-gradient(left, #e66465, #9198e5);
+$background-color: #1f6481;
+$gray-text: #2c2c2c;
+
+@mixin flex($flex-flow, $justify, $align) {
+    display:flex;
+    justify-content: $justify;
+    flex-flow: $flex-flow;
+    align-items: $align;
+}
+
+@import "global_style";
+@import "intro_style";
+@import "footer_Style";
+
+@media screen and (max-width:1427px) {
+    html {
+        font-size: 50%;
+    }
+    .splash {
+        display: none;
+    }
+    svg {
+        width: 80%;
+    }
+    
+    nav {
+        width: 100%;
+    }
+}
+@media screen and (max-width:770px) { 
+ html {
+    font-size: 45%; 
+}   
+nav {
+    
+    width: 100%;
+}
+.logo {
+
+    flex: 1 1 20rem;
+}
+nav ul {
+    flex: 1 1 80rem;
+}
+}
+
+@media screen and (max-width:581px) { 
+    html {
+        font-size: 35%;
+    }
+  .intro {
+      @include flex(column wrap,center,center);
+  }
+  .text {
+     align-items: center;
+     margin-top:10rem;
+  }
+  .me {
+      @include flex (column nowrap,start,center);
+  }
+  
+}

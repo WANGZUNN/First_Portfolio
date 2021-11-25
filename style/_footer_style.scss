@@ -1,0 +1,14 @@
+footer {
+    width: 100%;
+    min-height: 10vh;
+    background: $background-color;
+    @include flex(row wrap, space-around, center);
+}
+.copyright {
+    flex: 1 1 20rem;
+    margin-left:5rem;
+}
+.social-link {
+    flex: 1 1 20rem;
+    @include flex (row wrap, space-around,center);
+}
